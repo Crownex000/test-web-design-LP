@@ -19,14 +19,17 @@ const styles = {
     textAlign: "center",
     fontWeight: "bold",
     color: "#343a40",
-    marginBottom: "16px",
+  },
+  box: {
+    display: "flex",
+    justifyContent: "center",
   },
   indicators: (activeIndex, index) => ({
-    width: "60px",
-    height: "40px",
+    width: { xs: 50, md: 80 },
+    height: { xs: 20, md: 60 },
     objectFit: "cover",
     borderRadius: "4px",
-    margin: "0 4px",
+    m: { xs: 0.5, md: 1 },
     cursor: "pointer",
     backgroundColor: "#FFFF",
     border:
@@ -35,6 +38,9 @@ const styles = {
       border: "2px solid #007bff",
     },
   }),
+  caption: {
+    p: 0,
+  },
 };
 
 const images = [
@@ -85,8 +91,8 @@ const HomeD = () => {
         {images.map((image, index) => (
           <Box component={Carousel.Item} key={index} interval={3000}>
             <Box component="img" src={image} sx={styles.img} />
-            <Carousel.Caption>
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+            <Box component={Carousel.Caption} sx={styles.caption}>
+              <Box sx={styles.box}>
                 {images.map((image, index) => (
                   <Box
                     key={index}
@@ -97,7 +103,7 @@ const HomeD = () => {
                   />
                 ))}
               </Box>
-            </Carousel.Caption>
+            </Box>
           </Box>
         ))}
       </Box>
