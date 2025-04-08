@@ -42,7 +42,7 @@ const styles = {
     border: "1px solid #FFFF",
   },
   grid: {
-    width: { xs: 300, md: 350 },
+    width: { xs: "auto", md: 350 },
   },
 };
 
@@ -75,12 +75,10 @@ function Footer() {
             spacing={1}
             sx={styles.grid}
           >
-            <Grid size={{ xs: 12 }}>
+            <Grid size={{ xs: 12 }} justifyContent="center" alignItems="center">
               <Typography variant="h6" sx={styles.title}>
                 Marci Metzger - THE RIDGE REALTY GROUP
               </Typography>
-            </Grid>
-            <Grid size={{ xs: 12 }}>
               <Typography variant="caption" fontSize={10}>
                 3190 HW-160, Suite F, Pahrump, Nevada 89048, United States
               </Typography>
@@ -111,9 +109,17 @@ function Footer() {
                   <Typography variant="body1">Office Hours</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  {officeHours.map((hour) => (
-                    <Typography variant="body2">{hour}</Typography>
-                  ))}
+                  <Box component="ul" style={{ paddingLeft: "20px", margin: 0 }}>
+                    {officeHours.map((hour, index) => (
+                      <Box
+                        component="li"
+                        key={index}
+                        style={{ listStyleType: "none", marginBottom: "5px" }}
+                      >
+                        <Typography variant="body2">{hour}</Typography>
+                      </Box>
+                    ))}
+                  </Box>
                 </AccordionDetails>
               </Accordion>
             </Grid>

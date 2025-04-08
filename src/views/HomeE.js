@@ -45,6 +45,7 @@ const details = [
 const HomeE = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
+  const inView2 = useInView(ref, {once: true});
 
   return (
     <Box sx={styles.container}>
@@ -72,18 +73,17 @@ const HomeE = () => {
         </Grid>
         {details.map((detail, i, arr) => (
           <Grid
-            size={{ xs: 12 / arr.length }}
+            size={{ xs: 12, md: 12 / arr.length }}
             display="flex"
             justifyContent="center"
             alignItems="center"
           >
             <motion.div
-              ref={ref}
               initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
+              animate={inView2 ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 1 + 2 }}
             >
-              <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: {xs: "100%", md: 345} }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"

@@ -78,7 +78,7 @@ const HomeF = () => {
             </Typography>
           </motion.div>
         </Grid>
-        <Grid size={{ xs: 9 }}>
+        <Grid size={{ xs: 12, md: 9 }}>
           <Box sx={styles.form}>
             <Typography
               variant="h4"
