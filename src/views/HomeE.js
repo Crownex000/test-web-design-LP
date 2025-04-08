@@ -12,7 +12,7 @@ import { motion, useInView } from "motion/react";
 
 const styles = {
   container: {
-    p: 10,
+    p: {xs: 5, md: 10},
     backgroundColor: "#161616",
   },
   grid: {
