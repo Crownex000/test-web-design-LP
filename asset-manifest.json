@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-web-design-LP/static/css/main.3e0f2a37.css",
+    "main.js": "/test-web-design-LP/static/js/main.fe2a6c64.js",
+    "index.html": "/test-web-design-LP/index.html",
+    "main.3e0f2a37.css.map": "/test-web-design-LP/static/css/main.3e0f2a37.css.map",
+    "main.fe2a6c64.js.map": "/test-web-design-LP/static/js/main.fe2a6c64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e0f2a37.css",
+    "static/js/main.fe2a6c64.js"
+  ]
+}
