@@ -40,7 +40,7 @@ const styles = {
     mb: 3,
   },
   img: {
-    mx: 5,
+    m: { xs: 3, md: 5 },
     "&:hover": {
       transform: "scale(1.3)",
       transition: "transform 0.3s ease-in-out",
